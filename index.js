@@ -83,7 +83,7 @@ let currentValue = 0;
 		case 'KeyQ':
                     incrementTwo();
                     break;
-		case 'KeyL': //reset all
+		case 'Digit0': //reset all
                     reset();
 		    resetOne();
 		    resetTwo();
