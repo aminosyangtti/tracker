@@ -1,4 +1,4 @@
-let currentValue = 0;
+	let currentValue = 0;
         let currentValueOne = 0;
         let currentValueTwo = 0;
 
@@ -126,4 +126,3 @@ function showNotification(increment, counter) {
 
   }, 3000);
 }
-
