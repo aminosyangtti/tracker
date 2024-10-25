@@ -5,6 +5,7 @@ let currentValue = 0;
         function increment(value) {
             currentValue += value;
             document.getElementById('displayText').innerText = currentValue;
+		showNotification(value)
         }
 
         function decrement(value) {
@@ -20,6 +21,7 @@ let currentValue = 0;
         function incrementOne() {
             currentValueOne += 1;
             document.getElementById('displayTextOne').innerText = currentValueOne;
+		showNotification(1)
         }
 
         function decrementOne() {
@@ -35,6 +37,7 @@ let currentValue = 0;
         function incrementTwo() {
             currentValueTwo += 1;
             document.getElementById('displayTextTwo').innerText = currentValueTwo;
+		showNotification(1)
         }
 
         function decrementTwo() {
@@ -93,3 +96,20 @@ let currentValue = 0;
                     break;
             }
         });
+function showNotification(increment) {
+  const notification = document.getElementById('notification');
+ 
+  notification.style.opacity = 1
+  notification.style.backgroundColor = '#f8f8f8'
+  notification.style.color = '#191827'
+
+  notification.innerText = `+${increment}`
+
+  setTimeout(() => {
+    notification.style.opacity = 0
+    notification.style.transform = 'translateY(0);'
+  
+
+  }, 3000);
+}
+
