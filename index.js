@@ -6,14 +6,14 @@ let currentValue = 0;
             currentValue += value;
             document.getElementById('displayText').innerText = currentValue;
 		showNotification(value, 1, true)
-		document.getElementById('title').innerText = `Count: ${currentValues}`;
+		document.getElementById('title').innerText = `Count: ${currentValue}`;
         }
 
         function decrement(value) {
             currentValue -= value;
             document.getElementById('displayText').innerText = currentValue;
 		showNotification(value, 1, false)
-		document.getElementById('title').innerText = `Count: ${currentValues}`;
+		document.getElementById('title').innerText = `Count: ${currentValue}`;
         }
 
         function reset() {
