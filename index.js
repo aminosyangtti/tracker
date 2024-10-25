@@ -100,15 +100,14 @@ function showNotification(increment) {
   const notification = document.getElementById('notification');
  
   notification.style.opacity = 1
-  notification.style.backgroundColor = '#f8f8f8'
-  notification.style.color = '#191827'
+  notification.style.backgroundColor = '#1c1c1c'
+  notification.style.color = '#f8f8f8'
 
-  notification.innerText = `+${increment}`
+  notification.innerText = `+${increment}!`
 	console.log("showing notif...")
 
   setTimeout(() => {
     notification.style.opacity = 0
-    notification.style.transform = 'translateY(0);'
   
 
   }, 3000);
