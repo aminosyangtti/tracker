@@ -104,6 +104,7 @@ function showNotification(increment) {
   notification.style.color = '#191827'
 
   notification.innerText = `+${increment}`
+	console.log("showing notif...")
 
   setTimeout(() => {
     notification.style.opacity = 0
