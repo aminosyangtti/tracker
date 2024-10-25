@@ -121,7 +121,7 @@ function showNotification(number, counter, increment) {
   notification.style.backgroundColor = increment ? '#4d4d4d' : '#9f4c4c'
   notification.style.color = '#f8f8f8'
 
-  notification.innerText = increment ? `+${number}!` : `-${number}!`
+  notification.innerText = increment ? `+${number}` : `-${number}`
   setTimeout(() => {
     notification.style.opacity = 0
   	
