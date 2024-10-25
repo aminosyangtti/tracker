@@ -1,16 +1,17 @@
-	let currentValue = 0;
+let currentValue = 0;
         let currentValueOne = 0;
         let currentValueTwo = 0;
 
         function increment(value) {
             currentValue += value;
             document.getElementById('displayText').innerText = currentValue;
-		showNotification(value, 1)
+		showNotification(value, 1, true)
         }
 
         function decrement(value) {
             currentValue -= value;
             document.getElementById('displayText').innerText = currentValue;
+		showNotification(value, 1, false)
         }
 
         function reset() {
@@ -21,12 +22,14 @@
         function incrementOne() {
             currentValueOne += 1;
             document.getElementById('displayTextOne').innerText = currentValueOne;
-		showNotification(1, 2)
+		showNotification(1, 2, true)
         }
 
         function decrementOne() {
             currentValueOne -= 1;
             document.getElementById('displayTextOne').innerText = currentValueOne;
+		showNotification(1, 2, false)
+
         }
 
         function resetOne() {
@@ -37,12 +40,13 @@
         function incrementTwo() {
             currentValueTwo += 1;
             document.getElementById('displayTextTwo').innerText = currentValueTwo;
-		showNotification(1, 3)
+		showNotification(1, 3, true)
         }
 
         function decrementTwo() {
             currentValueTwo -= 1;
             document.getElementById('displayTextTwo').innerText = currentValueTwo;
+		showNotification(1, 3, false)
         }
 
         function resetTwo() {
@@ -96,7 +100,7 @@
                     break;
             }
         });
-function showNotification(increment, counter) {
+function showNotification(number, counter, increment) {
 	let notification;
 	switch (counter) {
 		case 1:
@@ -114,15 +118,13 @@ function showNotification(increment, counter) {
   
  
   notification.style.opacity = 1
-  notification.style.backgroundColor = '#4d4d4d'
+  notification.style.backgroundColor = increment ? '#4d4d4d' : '#9f4c4c'
   notification.style.color = '#f8f8f8'
 
-  notification.innerText = `+${increment}!`
-	console.log("showing notif...")
-
+  notification.innerText = increment ? `+${number}!` : `-${number}!`
   setTimeout(() => {
     notification.style.opacity = 0
-  
+  	
 
-  }, 3000);
+  }, 500);
 }
