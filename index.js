@@ -99,13 +99,13 @@ let currentValue = 0;
 function showNotification(increment, counter) {
 	let notification;
 	switch (counter) {
-		case '1':
+		case 1:
 			notification = document.getElementById('notification');
 			 break;
-		case '2':
+		case 2:
 			notification = document.getElementById('notification2');
 			 break;
-		case '3':
+		case 3:
 			notification = document.getElementById('notification3');
 			 break;
 		default:
