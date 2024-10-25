@@ -114,7 +114,7 @@ function showNotification(increment, counter) {
   
  
   notification.style.opacity = 1
-  notification.style.backgroundColor = '#1c1c1c'
+  notification.style.backgroundColor = '#4d4d4d'
   notification.style.color = '#f8f8f8'
 
   notification.innerText = `+${increment}!`
